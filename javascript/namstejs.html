@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // isme dout yhe hai ki kya yhe similarly kaam nhi kar rahe hai kya
+      // normal call function - ismme direct kisi function ko call kr rahe hai
+
+      function one() {
+        two();
+        three();
+        four();
+        five();
+      }
+
+      function two() {
+        console.log("Hello");
+      }
+
+      function three() {
+        console.log("nice to meet you");
+      }
+
+      function four() {
+        console.log("how are you");
+      }
+
+      function five() {
+        console.log("bye");
+      }
+
+      // one();
+      two();
+      three();
+      four();
+      five();
+
+      // callback function - isme hum pahele
+
+      function greet(name, callback) {
+        console.log("Hi " + name);
+        callback();
+      }
+
+      function sayHlo() {
+        console.log("hlo bhai!");
+      }
+
+      function sayBye() {
+        console.log("Bye bhai!");
+      }
+      greet("Rahul", sayHlo);
+      greet("Amit", sayBye);
+
+      // ---------------------------------------------
+
+      // var aur faction me dout hai var ko agar pahele execute karege toh undefine ayega lekin hum jo function ke andar var bana rahe hai aur uslo pahele execute karte hai ton usme undefine kyu nahi ata
+
+      // var
+
+      var x = 10;
+      console.log(x);
+
+      //function
+
+    //   var x = 10;
+
+      function demo(y) {
+        var z = 5;
+        return y + z;
+      }
+      demo(3);
+      console.log(demo(3));
+    </script>
+  </body>
+</html>

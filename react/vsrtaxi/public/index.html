@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSR Taxi Cab Services</title>
+  <link rel="stylesheet" href="vsr.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">🚗</span>
+          <span class="logo-text">VSR Cab Services</span>
+        </div>
+        <nav class="nav">
+          <a href="#services">Services</a>
+          <a href="#fleet">Our Fleet</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Promo Banner -->
+  <div class="promo-banner">
+    <span class="promo-text">⚡ Special Offer: Get 10% off on your first booking! Use code: FIRST10</span>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Jaipur to Delhi Premium Cab Service</h1>
+        <p>Experience comfortable and safe journey with our professional drivers</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary">Book Now</button>
+          <button class="btn btn-secondary">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Badges -->
+  <div class="trust-badges">
+    <div class="container">
+      <div class="badges-container">
+        <div class="badge">
+          <span class="badge-icon">🛡️</span>
+          <span class="badge-text">Verified Drivers</span>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">⭐</span>
+          <span class="badge-text">4.8/5 Customer Rating</span>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">⏰</span>
+          <span class="badge-text">24/7 Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="booking-section">
+    <div class="container">
+      <div class="booking-form">
+        <h2>Book Your Ride</h2>
+        <form id="cabBookingForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Pickup Location</label>
+              <div class="input-icon">
+                📍
+                <input type="text" name="pickup" value="Jaipur" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Drop-off Location</label>
+              <div class="input-icon">
+                📍
+                <input type="text" name="dropoff" value="Delhi" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Date</label>
+              <div class="input-icon">
+                📅
+                <input type="date" name="date" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Time</label>
+              <div class="input-icon">
+                ⏰
+                <input type="time" name="time" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car Selection -->
+          <div class="car-selection">
+            <div class="car-card" data-car="dzire">
+              <div class="car-image">
+                <img src="car-website-image/photo5.png" alt="Honda City">
+                <div class="car-price">₹3000</div>
+              </div>
+              <h3>Swift Dzire</h3>
+              <div class="car-details">
+                <span>4 Seats</span>
+              </div>
+              <ul class="car-features">
+                <li>Air Conditioning</li>
+                <li>Music System</li>
+                <li>USB Charging</li>
+              </ul>
+            </div>
+            <div class="car-card" data-car="yaris">
+              <div class="car-image">
+                <img src="car-website-image/photo3.png" alt="Toyota Yaris">
+                <div class="car-price">₹3500</div>
+              </div>
+              <h3>Toyota Yaris</h3>
+              <div class="car-details">
+                <span>4 Seats</span>
+              </div>
+              <ul class="car-features">
+                <li>Leather Seats</li>
+                <li>Bluetooth</li>
+                <li>Cruise Control</li>
+              </ul>
+            </div>
+            <div class="car-card" data-car="innova">
+              <div class="car-image">
+                <img src="car-website-image/photo6.png" alt="Toyota Innova">
+                <div class="car-price">₹5500</div>
+              </div>
+              <h3>Toyota Innova</h3>
+              <div class="car-details">
+                <span>7 Seats</span>
+              </div>
+              <ul class="car-features">
+                <li>Family Friendly</li>
+                <li>Extra Luggage Space</li>
+                <li>Premium Interior</li>
+              </ul>
+            </div>
+            
+            <!-- <div class="car-card" data-car="bus">
+              <div class="car-image">
+                <img src="bus ki image ayegi" alt="Tour Bus">
+                <div class="car-price">₹8500</div>
+              </div>
+              <h3>Tour Bus</h3>
+              <div class="car-details">
+                <span>20 Seats</span>
+              </div>
+              <ul class="car-features">
+                <li>Group Travel</li>
+                <li>Tour Guide</li>
+                <li>Entertainment System</li>
+              </ul>
+            </div>
+          </div> -->
+
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" name="phone" required>
+            </div>
+            <!-- <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+          </div> -->
+
+          <!-- Promo Code -->
+          <div class="promo-section">
+            <label>Promo Code</label>
+            <div class="input-icon">
+              🎟️
+              <input type="text" name="promoCode" placeholder="Enter promo code">
+            </div>
+            <div id="promoMessage" class="promo-message"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-book">Book Now</button>
+
+          <!-- Booking Disclaimer -->
+          <div class="booking-disclaimer">
+            <p>By booking, you agree to our terms and conditions:</p>
+            <ul>
+              <li>Free cancellation up to 6 hours before pickup</li>
+              <li>Driver details will be shared 2 hours before journey</li>
+              <li>All our cars are sanitized before every trip</li>
+              <li>Prices include GST and toll charges</li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="features-section">
+    <div class="container">
+      <h2>Why Choose VSR Cab Services?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <h3>Safe Journey</h3>
+          <p>Professional drivers with verified backgrounds and GPS tracking</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⭐</div>
+          <h3>Premium Fleet</h3>
+          <p>Well-maintained luxury vehicles with modern amenities</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏰</div>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock customer service and roadside assistance</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💰</div>
+          <h3>Best Rates</h3>
+          <p>Competitive pricing with no hidden charges</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">🚗</span>
+            <span class="logo-text">VSR Cab Services</span>
+          </div>
+          <p>Your trusted travel partner for the Jaipur-Delhi route.</p>
+          <div class="footer-license">
+            <p>License No: TRA-2025-JD-0123</p>
+            <p>Govt. Registered Company</p>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>📞 +91 982861114</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 VSR Cab Services. All rights reserved.</p>
+        <p class="footer-disclaimer">
+          Disclaimer: Prices may vary based on peak hours and seasonal demand. We reserve the right to modify or cancel bookings in case of unforeseen circumstances.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <h3>Booking Confirmed!</h3>
+      <p>Thank you for choosing VSR Cab Services. Your booking has been confirmed. We will contact you shortly with driver details.</p>
+      <button class="btn btn-primary" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="vsr.js"></script>
+</body>
+</html>

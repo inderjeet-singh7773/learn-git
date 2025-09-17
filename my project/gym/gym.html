@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gym Website</title>
+    <link rel="stylesheet" href="gym.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <span class="logo-text">My Gym Website</span>
+                </div>
+
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                    <a href="#services" class="nav-link" data-section="services">Services</a>
+                    <a href="#bmi" class="nav-link" data-section="bmi">BMI Calculator</a>
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </nav>
+
+                <div class="user-actions">
+                    <div class="user-menu hidden" id="userMenu">
+                        <button class="profile-btn" id="profileBtn">
+                            <i class="fas fa-user"></i>
+                            <span id="userName">User</span>
+                        </button>
+                        <button class="logout-btn" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                    <button class="login-btn" id="loginBtn">Login</button>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="mobile-nav hidden" id="mobileNav">
+                <a href="#home" class="mobile-nav-link" data-section="home">Home</a>
+                <a href="#about" class="mobile-nav-link" data-section="about">About</a>
+                <a href="#services" class="mobile-nav-link" data-section="services">Services</a>
+                <a href="#bmi" class="mobile-nav-link" data-section="bmi">BMI Calculator</a>
+                <a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a>
+                <div class="mobile-user-actions">
+                    <button class="mobile-login-btn" id="mobileLoginBtn">Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Premium Fitness Experience</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Transform Your
+                            <span class="gradient-text">Body & Mind</span>
+                        </h1>
+                        <p class="hero-description">
+                            Join FitPro Gym and embark on your fitness journey with world-class equipment, 
+                            expert trainers, and a supportive community that drives results.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn-primary" id="getStartedBtn">
+                                <span>Get Started Today</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button class="btn-secondary">
+                                <i class="fas fa-play"></i>
+                                <span>Watch Demo</span>
+                            </button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Happy Members</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Expert Trainers</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Access</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-image-container">
+                            <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg" alt="Gym Equipment">
+                        </div>
+                        <div class="floating-card success-rate">
+                            <div class="card-number">95%</div>
+                            <div class="card-label">Success Rate</div>
+                        </div>
+                        <div class="floating-card rating">
+                            <div class="card-number">4.9★</div>
+                            <div class="card-label">Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About FitPro Gym</h2>
+                    <p class="section-description">
+                        For over a decade, FitPro Gym has been the premier destination for fitness enthusiasts 
+                        looking to transform their lives through comprehensive fitness programs and expert guidance.
+                    </p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Our Mission</h3>
+                        <p>
+                            At FitPro Gym, we believe fitness is not just about building muscle or losing weight—it's about 
+                            creating a sustainable, healthy lifestyle that enhances every aspect of your life. Our mission 
+                            is to provide a supportive environment where individuals of all fitness levels can achieve 
+                            their goals.
+                        </p>
+                        <p>
+                            With state-of-the-art equipment, expert trainers, and a welcoming community, we're committed 
+                            to helping you unlock your full potential and live your healthiest, happiest life.
+                        </p>
+                        <div class="about-stats">
+                            <div class="about-stat">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="stat-number">1000+</div>
+                                <div class="stat-label">Success Stories</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg" alt="Modern Gym Interior">
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Certified Trainers</h4>
+                        <p>Our expert trainers are certified professionals with years of experience in fitness and bodybuilding.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community Focus</h4>
+                        <p>Join a supportive community of fitness enthusiasts who motivate and inspire each other.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>24/7 Access</h4>
+                        <p>Train on your schedule with round-the-clock gym access and flexible membership options.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h4>Goal-Oriented</h4>
+                        <p>Personalized workout plans and nutrition guidance to help you achieve your specific fitness goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-description">
+                        Choose from our comprehensive range of fitness services designed to meet your unique goals and preferences.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card" data-service="personal-training">
+                        <div class="service-image">
+                            <img src="https://images.pexels.com/photos/863926/pexels-photo-863926.jpeg" alt="Personal Training">
+                            <div class="service-rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Personal Training</h3>
+                            <p>One-on-one coaching with certified trainers tailored to your specific goals and fitness level.</p>
+                            <div class="service-details">
+                                <span><i class="fas fa-clock"></i> 60 minutes</span>
+                                <span><i class="fas fa-users"></i> Professional</span>
+                            </div>
+                            <div class="service-footer">
+                                <div class="service-price">₹2,500/session</div>
+                                <button class="book-btn" data-service="Personal Training">
+                                    <span>Book Now</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-service="group-fitness">
+                        <div class="service-image">
+                            <img src="https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg" alt="Group Fitness Classes">
+                            <div class="service-rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Group Fitness Classes</h3>
+                            <p>High-energy group workouts including Zumba, CrossFit, Yoga, and strength training classes.</p>
+                            <div class="service-details">
+                                <span><i class="fas fa-clock"></i> 45 minutes</span>
+                                <span><i class="fas fa-users"></i> Professional</span>
+                            </div>
+                            <div class="service-footer">
+                                <div class="service-price">₹800/class</div>
+                                <button class="book-btn" data-service="Group Fitness Classes">
+                                    <span>Book Now</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-service="nutrition">
+                        <div class="service-image">
+                            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Nutrition Consultation">
+                            <div class="service-rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Nutrition Consultation</h3>
+                            <p>Personalized meal plans and nutrition guidance from certified dietitians.</p>
+                            <div class="service-details">
+                                <span><i class="fas fa-clock"></i> 30 minutes</span>
+                                <span><i class="fas fa-users"></i> Professional</span>
+                            </div>
+                            <div class="service-footer">
+                                <div class="service-price">₹1,500/session</div>
+                                <button class="book-btn" data-service="Nutrition Consultation">
+                                    <span>Book Now</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-service="strength">
+                        <div class="service-image">
+                            <img src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg" alt="Strength Training">
+                            <div class="service-rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Strength Training</h3>
+                            <p>Build muscle and increase strength with our comprehensive weight training programs.</p>
+                            <div class="service-details">
+                                <span><i class="fas fa-clock"></i> 90 minutes</span>
+                                <span><i class="fas fa-users"></i> Professional</span>
+                            </div>
+                            <div class="service-footer">
+                                <div class="service-price">₹1,200/session</div>
+                                <button class="book-btn" data-service="Strength Training">
+                                    <span>Book Now</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-service="cardio">
+                        <div class="service-image">
+                            <img src="https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg" alt="Cardio Bootcamp">
+                            <div class="service-rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Cardio Bootcamp</h3>
+                            <p>High-intensity cardio workouts designed to burn fat and improve cardiovascular health.</p>
+                            <div class="service-details">
+                                <span><i class="fas fa-clock"></i> 45 minutes</span>
+                                <span><i class="fas fa-users"></i> Professional</span>
+                            </div>
+                            <div class="service-footer">
+                                <div class="service-price">₹600/class</div>
+                                <button class="book-btn" data-service="Cardio Bootcamp">
+                                    <span>Book Now</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-service="yoga">
+                        <div class="service-image">
+                            <img src="https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg" alt="Yoga & Meditation">
+                            <div class="service-rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Yoga & Meditation</h3>
+                            <p>Find inner peace and flexibility with our yoga and meditation sessions.</p>
+                            <div class="service-details">
+                                <span><i class="fas fa-clock"></i> 60 minutes</span>
+                                <span><i class="fas fa-users"></i> Professional</span>
+                            </div>
+                            <div class="service-footer">
+                                <div class="service-price">₹500/class</div>
+                                <button class="book-btn" data-service="Yoga & Meditation">
+                                    <span>Book Now</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-plan">
+                    <h3>Need a Custom Plan?</h3>
+                    <p>Our trainers can create personalized workout and nutrition plans tailored specifically to your goals.</p>
+                    <button class="btn-primary">Contact Us for Custom Plans</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI Calculator Section -->
+        <section id="bmi" class="bmi-calculator">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">BMI Calculator</h2>
+                    <p class="section-description">
+                        Calculate your Body Mass Index and get personalized health insights
+                    </p>
+                </div>
+
+                <div class="bmi-content">
+                    <div class="bmi-form-container">
+                        <div class="bmi-form-header">
+                            <div class="bmi-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Calculate Your BMI</h3>
+                        </div>
+
+                        <form id="bmiForm" class="bmi-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Height (cm)</label>
+                                    <input type="number" id="height" placeholder="170" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Weight (kg)</label>
+                                    <input type="number" id="weight" placeholder="70" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input type="number" id="age" placeholder="25">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select id="gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn-primary">Calculate BMI</button>
+                                <button type="button" id="resetBtn" class="btn-secondary">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="bmi-results">
+                        <div id="bmiResultCard" class="bmi-result-card hidden">
+                            <h3>Your Results</h3>
+                            <div class="bmi-score">
+                                <div id="bmiValue" class="bmi-value">0</div>
+                                <div id="bmiCategory" class="bmi-category">Normal Weight</div>
+                            </div>
+                            <div id="bmiDescription" class="bmi-description">
+                                Great! You have a healthy weight. Keep maintaining your current lifestyle.
+                            </div>
+                            <div class="bmi-scale">
+                                <h4>BMI Scale</h4>
+                                <div class="scale-item">
+                                    <span>Underweight</span>
+                                    <span class="scale-range underweight">Below 18.5</span>
+                                </div>
+                                <div class="scale-item">
+                                    <span>Normal Weight</span>
+                                    <span class="scale-range normal">18.5 - 24.9</span>
+                                </div>
+                                <div class="scale-item">
+                                    <span>Overweight</span>
+                                    <span class="scale-range overweight">25.0 - 29.9</span>
+                                </div>
+                                <div class="scale-item">
+                                    <span>Obese</span>
+                                    <span class="scale-range obese">30.0 and above</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="bmiRecommendations" class="bmi-recommendations hidden">
+                            <h3>Recommendations</h3>
+                            <div id="recommendationsList" class="recommendations-list">
+                                <!-- Recommendations will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div id="bmiPlaceholder" class="bmi-placeholder">
+                            <i class="fas fa-calculator"></i>
+                            <p>Enter your details to calculate your BMI and get personalized health insights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-description">
+                        Ready to start your fitness journey? Contact us today and let's discuss how we can help you achieve your goals.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Address</h4>
+                                <p>123 Fitness Street, Gym District<br>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91 98765 43210<br>+91 87654 32109</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@fitprogym.com<br>support@fitprogym.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Operating Hours</h4>
+                                <p>Monday - Friday: 5:00 AM - 11:00 PM<br>Saturday - Sunday: 6:00 AM - 10:00 PM<br><span class="premium-hours">24/7 Access for Premium Members</span></p>
+                            </div>
+                        </div>
+
+                        <div class="map-placeholder">
+                            <h4>Find Us</h4>
+                            <div class="map-container">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Interactive Map</p>
+                                <span>Located in the heart of the city</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" id="contactName" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" id="contactPhone" placeholder="Your Phone Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="contactEmail" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea id="contactMessage" rows="4" placeholder="Tell us about your fitness goals or any questions you have..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <span class="logo-text">FitPro Gym</span>
+                    </div>
+                    <p>Transform your body and mind with our world-class fitness programs and expert guidance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#bmi">BMI Calculator</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Personal Training</a></li>
+                        <li><a href="#">Group Classes</a></li>
+                        <li><a href="#">Nutrition Consulting</a></li>
+                        <li><a href="#">Strength Training</a></li>
+                        <li><a href="#">Yoga & Meditation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info-footer">
+                        <div class="contact-item-footer">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>123 Fitness Street</p>
+                                <p>Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item-footer">
+                            <i class="fas fa-phone"></i>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div class="contact-item-footer">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@fitprogym.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FitPro Gym. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Welcome Back</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="authForm" class="auth-form">
+                <div id="nameField" class="form-group hidden">
+                    <label>Full Name</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="authName" placeholder="Enter your full name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="authEmail" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="authPassword" placeholder="Enter your password" required>
+                        <button type="button" class="password-toggle" id="passwordToggle">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="confirmPasswordField" class="form-group hidden">
+                    <label>Confirm Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="authConfirmPassword" placeholder="Confirm your password">
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary" id="authSubmitBtn">Sign In</button>
+                <button type="button" class="auth-switch" id="authSwitchBtn">Don't have an account? Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Profile Settings</h2>
+                <button class="modal-close" id="closeProfileModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="profile-content">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <h3 id="profileUserName">User Name</h3>
+                        <p id="profileUserEmail">user@example.com</p>
+                        <div class="membership-info">
+                            <span class="membership-badge" id="membershipBadge">BASIC Member</span>
+                            <span class="join-date" id="joinDate">Since Jan 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <form id="profileForm" class="profile-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="profileName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Weight Goal</label>
+                        <select id="weightGoal">
+                            <option value="maintain">Maintain Current Weight</option>
+                            <option value="loss">Weight Loss</option>
+                            <option value="gain">Weight Gain</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Current Weight (kg)</label>
+                            <input type="number" id="currentWeight" placeholder="70">
+                        </div>
+                        <div class="form-group">
+                            <label>Target Weight (kg)</label>
+                            <input type="number" id="targetWeight" placeholder="65">
+                        </div>
+                    </div>
+                    <div id="goalVisualization" class="goal-visualization hidden">
+                        <h4>Your Goal</h4>
+                        <div class="goal-display">
+                            <div class="weight-current">
+                                <div class="weight-value" id="currentWeightDisplay">70</div>
+                                <div class="weight-label">Current</div>
+                            </div>
+                            <div class="goal-arrow">
+                                <i id="goalIcon" class="fas fa-target"></i>
+                            </div>
+                            <div class="weight-target">
+                                <div class="weight-value" id="targetWeightDisplay">65</div>
+                                <div class="weight-label">Target</div>
+                            </div>
+                        </div>
+                        <div class="weight-difference">
+                            <span id="weightDifference">Difference: 5.0 kg</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i>
+                        <span>Save Changes</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

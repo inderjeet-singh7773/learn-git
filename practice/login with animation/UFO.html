@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UFO Mouse Follower</title>
+  <style>
+    :root {
+      --bg: radial-gradient(1200px 600px at 70% -10%, #2a2a72 0%, #009ffd 35%, #0b1023 100%);
+      --glow: 0 10px 40px rgba(0, 255, 204, 0.25);
+      --trail: rgba(255, 180, 0, 0.18);
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #0b1023;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    }
+    .sky {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+    }
+    .stars, .twinkle {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-repeat: repeat;
+      opacity: 0.35;
+      filter: blur(0.3px);
+    }
+    /* Tiny starfield using CSS gradients */
+    .stars {
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, #ffffff 60%, rgba(255,255,255,0) 61%),
+        radial-gradient(1px 1px at 30% 80%, #ffffff 60%, rgba(255,255,255,0) 61%),
+        radial-gradient(1px 1px at 50% 50%, #ffffff 60%, rgba(255,255,255,0) 61%),
+        radial-gradient(1px 1px at 70% 30%, #ffffff 60%, rgba(255,255,255,0) 61%),
+        radial-gradient(1px 1px at 90% 60%, #ffffff 60%, rgba(255,255,255,0) 61%);
+      background-size: 400px 400px;
+      animation: drift 60s linear infinite;
+    }
+    .twinkle {
+      animation: twinkle 3.5s ease-in-out infinite;
+    }
+    @keyframes drift {
+      from { transform: translate3d(0,0,0); }
+      to { transform: translate3d(-400px,-400px,0); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Dragon container */
+    .dragon {
+      position: absolute;
+      width: clamp(80px, 10vw, 140px);
+      height: auto;
+      transform: translate(-50%, -50%);
+      will-change: transform, filter;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45)) drop-shadow(0 0 24px rgba(0,255,204,0.25));
+    }
+
+    /* Dragon SVG styling */
+    .dragon svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Subtle pointer */
+    .cursor-dot {
+      position: absolute;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(255,255,255,0.6);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      box-shadow: 0 0 20px rgba(255,255,255,0.6);
+      mix-blend-mode: screen;
+    }
+
+    /* Motion trail particles */
+    .trail {
+      position: absolute;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--trail);
+      transform: translate(-50%, -50%) scale(1);
+      pointer-events: none;
+      filter: blur(1px);
+      will-change: transform, opacity;
+    }
+
+    .hint {
+      position: fixed;
+      left: 50%; bottom: 20px;
+      transform: translateX(-50%);
+      color: #cfe9ff;
+      background: rgba(0,0,0,0.35);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: .3px;
+      box-shadow: var(--glow);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <div class="stars"></div>
+    <div class="twinkle stars"></div>
+  </div>
+
+  <!-- Cursor guide (optional) -->
+  <div class="cursor-dot" id="cursor"></div>
+
+  <!-- Dragon (inline SVG for zero dependencies). Credits: simplified fantasy silhouette. -->
+  <div class="dragon" id="dragon" aria-label="UFO saucer" role="img">
+    <!-- Minimal, clean UFO saucer with pulsing glow + tractor beam -->
+    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="ufoDome" cx="50%" cy="45%" r="60%">
+          <stop offset="0%" stop-color="#e6faff"/>
+          <stop offset="60%" stop-color="#a6e4ff"/>
+          <stop offset="100%" stop-color="#5ec8ff"/>
+        </radialGradient>
+        <linearGradient id="ufoHull" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#9aa4b3"/>
+          <stop offset="50%" stop-color="#c7d0db"/>
+          <stop offset="100%" stop-color="#8b95a6"/>
+        </linearGradient>
+        <radialGradient id="ufoGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(135,255,233,0.9)"/>
+          <stop offset="100%" stop-color="rgba(135,255,233,0)"/>
+        </radialGradient>
+        <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="rgba(180,255,230,0.35)"/>
+          <stop offset="60%" stop-color="rgba(120,245,210,0.18)"/>
+          <stop offset="100%" stop-color="rgba(120,245,210,0)"/>
+        </linearGradient>
+        <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="4"/>
+        </filter>
+      </defs>
+
+      <!-- Subtle outer glow -->
+      <circle cx="300" cy="170" r="85" fill="url(#ufoGlow)" filter="url(#softGlow)">
+        <animate attributeName="r" values="78;90;78" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2.6s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Tractor beam (transparent triangle) -->
+      <path d="M240 190 L360 190 L300 360 Z" fill="url(#beamGrad)" opacity="0.75">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.2s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Hull shadow ellipse -->
+      <ellipse cx="300" cy="200" rx="120" ry="28" fill="#0a0f1e" opacity="0.35"/>
+
+      <!-- Saucer bottom ring -->
+      <ellipse cx="300" cy="190" rx="120" ry="32" fill="url(#ufoHull)" stroke="#5e6675" stroke-width="2"/>
+
+      <!-- Saucer mid rim (thicker) -->
+      <ellipse cx="300" cy="176" rx="140" ry="20" fill="url(#ufoHull)" stroke="#5e6675" stroke-width="2"/>
+
+      <!-- Light pips around rim -->
+      <g>
+        <circle cx="200" cy="176" r="5" fill="#bafff0">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" begin="0s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="235" cy="176" r="5" fill="#bafff0">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" begin="0.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="270" cy="176" r="5" fill="#bafff0">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="330" cy="176" r="5" fill="#bafff0">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" begin="0.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="365" cy="176" r="5" fill="#bafff0">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" begin="0.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="400" cy="176" r="5" fill="#bafff0">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="1.2s" begin="1s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <!-- Dome -->
+      <ellipse cx="300" cy="150" rx="70" ry="38" fill="url(#ufoDome)" stroke="#7fbbe6" stroke-width="2"/>
+      <ellipse cx="300" cy="160" rx="110" ry="18" fill="url(#ufoHull)"/>
+
+      <!-- Tiny cockpit silhouettes -->
+      <g fill="#1a2030">
+        <circle cx="280" cy="150" r="6"/>
+        <circle cx="320" cy="150" r="6"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hint">Move your mouse / touch to guide the UFO 🛸✨</div>
+
+  <script>
+    // --- Config ---
+    const smoothing = 0.12;        // 0..1 (higher = snappier)
+    const rotateFactor = 0.15;     // rotation intensity based on velocity
+    const speedScaleFactor = 0.002; // scale up slightly when moving fast
+    const trailEveryMs = 35;       // particle frequency
+
+    const dragon = document.getElementById('dragon');
+    const cursor = document.getElementById('cursor');
+
+    // Track target position (mouse/touch) and current position (dragon)
+    let target = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let pos = { x: target.x, y: target.y };
+    let last = { x: target.x, y: target.y };
+    let lastTrailTime = 0;
+
+    function onMove(e) {
+      if (e.touches && e.touches[0]) {
+        target.x = e.touches[0].clientX;
+        target.y = e.touches[0].clientY;
+      } else {
+        target.x = e.clientX;
+        target.y = e.clientY;
+      }
+    }
+
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('touchmove', onMove, { passive: true });
+
+    // Keep centered on resize
+    window.addEventListener('resize', () => {
+      if (!movedYet) {
+        target.x = window.innerWidth / 2;
+        target.y = window.innerHeight / 2;
+        pos.x = target.x; pos.y = target.y;
+      }
+    });
+
+    let movedYet = false;
+
+    function createTrail(x, y, velocity) {
+      const t = document.createElement('div');
+      t.className = 'trail';
+      const size = Math.min(18, 8 + Math.hypot(velocity.vx, velocity.vy) * 0.05);
+      t.style.width = size + 'px';
+      t.style.height = size + 'px';
+      t.style.left = x + 'px';
+      t.style.top = y + 'px';
+      document.body.appendChild(t);
+
+      // Animate fade & drift
+      const life = 650 + Math.random() * 300;
+      const dx = (Math.random() - 0.5) * 20;
+      const dy = (Math.random() - 0.5) * 20;
+      const start = performance.now();
+      function fade(now) {
+        const p = Math.min(1, (now - start) / life);
+        t.style.transform =` translate(calc(-50% + ${dx * p}px), calc(-50% + ${dy * p}px)) scale(${1 - p * 0.5})`;
+        t.style.opacity = String(1 - p);
+        if (p < 1) requestAnimationFrame(fade); else t.remove();
+      }
+      requestAnimationFrame(fade);
+    }
+
+    function animate(now) {
+      // Smooth follow
+      const dx = target.x - pos.x;
+      const dy = target.y - pos.y;
+      pos.x += dx * smoothing;
+      pos.y += dy * smoothing;
+
+      // Velocity (for rotation & scale)
+      const vx = pos.x - last.x;
+      const vy = pos.y - last.y;
+      last.x = pos.x; last.y = pos.y;
+      const speed = Math.hypot(vx, vy);
+
+      // Rotate towards movement direction
+      const angle = Math.atan2(vy, vx) * 180 / Math.PI;
+      const tilt = Math.max(-20, Math.min(20, (vy) * rotateFactor));
+      const scale = 1 + Math.min(0.25, speed * speedScaleFactor);
+
+      dragon.style.left = pos.x + 'px';
+      dragon.style.top = pos.y + 'px';
+      dragon.style.transform =` translate(-50%, -50%) rotate(${angle}deg) skewY(${tilt}deg) scale(${scale})`;
+
+      // Cursor glow
+      cursor.style.left = target.x + 'px';
+      cursor.style.top = target.y + 'px';
+
+      // Trail particles (rate-limited)
+      if (now - lastTrailTime > trailEveryMs) {
+        movedYet = true;
+        lastTrailTime = now;
+        createTrail(pos.x, pos.y, { vx, vy });
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>

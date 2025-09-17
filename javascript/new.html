@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         //prototype in js
+// // Constructor function
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// // Prototype me ek method add kar rahe hain
+// Person.prototype.greet = function() {   // agar hum isko use nahi karege toh naam aur age me undefine show hoga
+//     console.log(`Hello, mera naam ${this.name} hai aur meri umar ${this.age} saal hai.`);
+// };
+
+// // Objects create kar rahe hain
+// const person1 = new Person("Rahul", 25);  // yh ek new person detail de raha hai
+// const person2 = new Person("Priya", 30);
+
+// person1.greet(); // Output: Hello, mera naam Rahul hai aur meri umar 25 saal hai.
+// person2.greet(); // Output: Hello, mera naam Priya hai aur meri umar 30 saal hai.
+
+// // // proyotype Objects
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// // Prototype object me ek method add kar rahe hain
+// Person.prototype.greet = function() {
+//     console.log(`Hello, mera naam ${this.name} hai.`);
+// };
+
+// // Object bana rahe hain
+// const person3 = new Person("Rahul", 25);
+// const person4 = new Person("Priya", 30);
+
+// person3.greet(); // Output: Hello, mera naam Rahul hai.
+// person4.greet(); // Output: Hello, mera naam Priya hai.
+// console.log(person3.__proto__); 
+// console.log( Person.prototype);  //indono ka out put same ayega 
+
+// //console.log(person3.__proto__ === Person.prototype); // true
+//function Person(firstname,lastname, age) {  
+//     this.firstname = firstname;
+//     this.lastname = lastname;
+//     this.age = age;
+//     this.phone = "0123456789";
+//     this.price = "5000";
+//     this.company = "nokia";
+//     this.fullname = function(){
+//        // console.log (`${this.firstname} ${this.lastname}`);  // isse undefine aaraha hai
+//       return `${this.firstname} ${this.lastname}`;
+//     };
+// }
+
+
+// Prototype me ek method add karte hain
+
+//Person.prototype.greet = function() {
+ // console.log(`Hello, mera naam ${this.fullname()} hai. meri age ${this.age}`);
+// };
+
+// const person1 = new Person("Rahul", "Sharma", 25 ); // clone bana ya hai persone 1 ka
+
+// console.log(person1.fullname());
+// person1.greet();
+
+// // ARRAY 1ST
+// let size = prompt("Enter the number of elements:");  // User se array size le rahe hain
+// let arr = [];
+
+// for (let i = 0; i < size; i++) {
+//     arr[i] = prompt(`Enter element ${i + 1}:`); // Har element ke liye prompt
+// }
+
+// console.log("User Input Array:", arr);
+
+// // ARRAY 2ND
+
+let input = prompt("Enter array elements separated by commas:");
+let arr = input.split(",");  // Comma se split kar rahe hain
+
+console.log("User Input Array:", arr);
+
+// // array 3rd
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Enter array elements separated by spaces: ", function(input) {
+    let arr = input.split(" ");  // Space se split kar rahe hain
+    console.log("User Input Array:", arr);
+    rl.close();
+});
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

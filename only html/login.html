@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple HTML Form</title>
+</head>
+<body>
+   
+  <h1>Login Form</h1>
+
+  <form id="myForm">
+    
+    <!-- Name  -->
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+    <!-- Email  -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+    <!-- Password  -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter password" required><br><br>
+
+    <!-- Submit Button -->
+    <button type="submit" onclick="alert('LOGIN SUCCESSFUL 😊')">LOGIN</button>
+
+  </form>
+
+</body>
+</html>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #1abc9c;
+  }

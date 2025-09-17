@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.swatches {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.swatch[aria-checked="true"] {
+  border-color: black;
+  box-shadow: 0 0 5px black;
+}
+
+img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+</style>
+<body>
+  <main>
+    <section class="product-card">
+      <figure>
+        <img id="product-image" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoW0S-HMFDYFtqHnMNN2EyIanFoz6nJ6zNeCVPD9KOEDRX_Ro7QZAHSm0yRDPqG9FDiSnszh5-JiIDmJZsXe5uVoxoz_hbOYuqefgT6S4" alt="Red Shirt" />
+      </figure>
+      <h2><b>Casual Stylish Shirt</b></h2>
+      <p id="product-price">₹ 999</p>
+      <div class="swatches">
+        <button class="swatch" aria-checked="true" role="radio" style="background-color: red" data-index="0"></button>
+        <button class="swatch" aria-checked="false" role="radio" style="background-color: blue" data-index="1"></button>
+        <button class="swatch" aria-checked="false" role="radio" style="background-color: green" data-index="2"></button>
+      </div>
+    </section>
+  </main>
+  <script >const productData = [
+  {
+    color: "Red",
+    image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoW0S-HMFDYFtqHnMNN2EyIanFoz6nJ6zNeCVPD9KOEDRX_Ro7QZAHSm0yRDPqG9FDiSnszh5-JiIDmJZsXe5uVoxoz_hbOYuqefgT6S4",
+    price: "₹ 999"
+  },
+  {
+    color: "Blue",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp6ogjR8eqF99AIdbL-FlU5o_7ZPXaEcVvUQ&s",
+    price: "₹ 1049"
+  },
+  {
+    color: "Green",
+    image: "https://rukminim3.flixcart.com/image/850/1000/xif0q/shirt/m/z/2/l-p-s-green-shirts-l-soundryafabric-original-imagkfkugxs2fghn.jpeg?q=90&crop=false",
+    price: "₹ 1099"
+  }
+];
+
+const swatches = document.querySelectorAll(".swatch");
+const productImage = document.getElementById("product-image");
+const productPrice = document.getElementById("product-price");
+
+swatches.forEach((swatch, index) => {
+  swatch.addEventListener("click", () => {
+    productImage.src = productData[index].image;
+    productImage.alt = productData[index].color + " Shirt";
+    productPrice.textContent = productData[index].price;
+
+    swatches.forEach(btn => btn.setAttribute("aria-checked", "false"));
+    swatch.setAttribute("aria-checked", "true");
+  });
+});
+</script>
+</body>
+</html>

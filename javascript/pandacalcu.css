@@ -1,0 +1,117 @@
+/* 📌 Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* 📌 Panda Bounce Animation */
+@keyframes pandaBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 📌 Smooth Entrance Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📌 Calculator Box */
+.calculator {
+    width: 270px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    border: 5px solid black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 📌 Display Screen */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+}
+
+/* 📌 Buttons Row */
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 📌 Buttons Styling */
+.row button {
+    width: 22%;
+    height: 55px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.2s ease-in-out;
+}
+
+/* 📌 Button Press Animation */
+.row button:active {
+    transform: scale(0.9);
+    transition: 0.1s;
+}
+
+/* 📌 Button Hover Effect */
+.row button:hover {
+    background: #ddd;
+    transform: scale(1.1);
+}
+
+/* 📌 Special Buttons (C, AC) - Black & White Panda Theme */
+.row button.special {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    animation: pandaBounce 2s infinite ease-in-out; /* Panda Effect */
+}
+
+.row button.special:hover {
+    background-color: #444;
+}
+
+/* 📌 Equal Button (=) - Black Panda Effect */
+.row button.special2 {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    animation: pandaBounce 2s infinite ease-in-out; /* Panda Effect */
+}
+
+.row button.special2:hover {
+    background-color: #444;
+}
+
+/* 📌 Operator Buttons (+, -, *, /, %) */
+.row button:nth-child(3),
+.row button:nth-child(4) {
+    background: black;
+    color: white;
+}
+
+.row button:nth-child(3):hover,
+.row button:nth-child(4):hover {
+    background: #444;
+}

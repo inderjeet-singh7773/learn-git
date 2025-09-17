@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <script>
+              //normal function
+            //   function add(a,b)
+            //   {
+            //     return (a+b);
+            //   }
+            //   let result = add(5,5);
+            // //   console.log(add);    output : (ƒ add(a,b)
+            // //   {
+            //     // return (a+b);
+            // //   })
+            // console.log(result);  //output : 10
+
+            // arrow function
+            //without return
+           // const add = (a,b) => a+b;
+            //console.log(add(5,6)); //output : 11 
+
+            // with return
+            // const add = (a,b) => 
+            // {
+            //     return  a+b;
+            // }
+            // let result = add(6,6);
+            // console.log(result); //output : 12
+
+            // named function
+            // function greet(name)
+            //  {
+            // return `Hello, ${name}!`;
+            //  }
+            // console.log(greet("Amit")); // Output: Hello, Alice!
+
+            // arrow name function 
+           // const greet=(name) => `hello, ${name}!`
+           // console.log(greet("amit")); //output : hello, amit!
+              
+           // constructor function
+        //    function person (name,age,city)
+        //    {
+        //     this.name=name;
+        //     this.age=age;
+        //     this.city=city;
+        //    }
+        //    const person1 = new person("amit",20,"delhi");
+        //    const person2 = new person("sumit",23,"noida");
+        //    const person3 = new person("arum",25,"gurgoan");
+        //    console.log(person1);   //output: person 1 ki puri detail aajayegi
+        //    console.log(person1.name); // person1 ka name show hoga
+        //    console.log(person1.age);//person1 ki age show hogi
+        //    console.log(person1.city);//person1 ki city show hogi
+
+        //    console.log(person2);//output: person 2 ki puri detail aajayegi
+        //    console.log(person2.name);// person2 ka name show hoga
+        //    console.log(person2.age);//person2 ki age show hogi
+        //    console.log(person2.city);//person2 ki city show hogi
+
+        //    console.log(person3);//output: person 3 ki puri detail aajayegi
+        //    console.log(person3.name);// person3 ka name show hoga
+        //    console.log(person3.age);//person3 ki age show hogi
+        //    console.log(person3.city);//person3 ki city show hogi
+
+        // factorial in function 
+        function factorial(n)
+         {
+        let result = 1;// isse jo output aaraha hai vo multipy ho raha hai
+        for (let i = 1; i <= n; i++) 
+        {
+            //result *= 3; //isme factorial nahi ho raha hai
+                              //1 * 3 = 3
+                             //3 * 3 = 9
+                             // 9 * 3 = 27
+                            // 27 * 3 = 81
+                            // 81 * 3 = 243 
+
+
+            result *=i; //isse output factorial me ayega 
+                        //  1 * 1 = 1
+                        //  1 * 2 = 2
+                        //  2 * 3 = 6
+                        //  6 * 4 = 24
+                        //  24 * 5 = 120
+
+        // result = i; // isse sirf output 5 aayega
+        }
+        return result;
+        }
+
+        console.log(factorial(5)); // Output: 120
+
+    </script>
+  </body>
+</html>

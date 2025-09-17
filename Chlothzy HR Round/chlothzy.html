@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothzy</title>
+
+    <link rel="stylesheet" href="chlothzy.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <h1>
+            <img
+              class="logo"
+              src="data:image/jpeg;base64,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"
+              alt="Clothzy"
+            />
+          </h1>
+        </div>
+        <div class="nav-actions">
+          <label class="search" aria-label="Search products">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 21l-4.35-4.35"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <circle
+                cx="10.5"
+                cy="10.5"
+                r="6.5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            <input id="q" type="search" placeholder="Search products..." />
+          </label>
+          <button
+            id="mode"
+            class="toggle theme"
+            title="Toggle dark / light"
+            aria-label="Toggle theme"
+          >
+            <!-- Sun -->
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M12 2v2m0 16v2M2 12h2m16 0h2M4.22 4.22l1.41 1.41m12.74 12.74l1.41 1.41M4.22 19.78l1.41-1.41m12.74-12.74l1.41-1.41"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <!-- Moon -->
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              />
+            </svg>
+          </button>
+          <button id="openCart" class="toggle cartBtn" title="Open cart">
+            🛒 Cart <span id="cartCount" class="badge">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="container">
+      <section class="hero">
+        <div class="panel">
+          <h2>Clothing Store Website Project</h2>
+          <p>
+            I created a clothing store website using HTML, CSS, and JavaScript.
+            It has product photos with color and size options, and a shopping
+            cart that calculates the total price including GST.
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap">
+            <a href="#products" class="btn">Explore Products</a>
+            <a href="#about" class="btn secondary">About Brand</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTERS -->
+      <section id="products">
+        <div class="section-title">
+          <h3>Products</h3>
+          <small
+            >Casual Shirt • Pant • Jeans • Shirt • Lower • T-Shirt • Party Wear
+            Dress</small
+          >
+        </div>
+        <div class="chips" aria-label="Filters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="Casual Shirt">Casual Shirt</button>
+          <button class="chip" data-filter="Pant">Pant</button>
+          <button class="chip" data-filter="Jeans">Jeans</button>
+          <button class="chip" data-filter="Lower">Lower</button>
+          <button class="chip" data-filter="T-Shirt">T-Shirt</button>
+          <button class="chip" data-filter="Party Wear Dress">
+            Party Wear Dress
+          </button>
+        </div>
+
+        <!-- Small toast notification (bottom center) -->
+        <div id="toast"></div>
+
+        <!-- GRID -->
+        <div id="grid" class="grid" style="margin-top: 12px"></div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" style="margin-top: 26px">
+        <div class="section-title">
+          <h3>About Clothzy</h3>
+          <small>Modern E-commerce Store</small>
+        </div>
+        <div class="panel">
+          <p class="muted">
+            Built a modern e-commerce store featuring product customization
+            (color/size), dark/light mode, and a checkout-ready cart designed
+            with clean, maintainable code.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- CART DRAWER -->
+    <aside id="drawer" class="drawer" aria-live="polite" aria-label="Cart">
+      <header>
+        <strong>Your Cart</strong>
+        <button id="closeCart" class="toggle">Close</button>
+      </header>
+      <main>
+        <div id="lines" class="empty">Your cart is empty.</div>
+      </main>
+      <div class="summary">
+        <div class="row">
+          <span>Subtotal</span><span id="subtotal">₹0</span>
+        </div>
+        <div class="row">
+          <span>Traveling Charge</span><span id="travel">₹50</span>
+        </div>
+        <div class="row"><span>GST (18%)</span><span id="gst">₹0</span></div>
+        <div class="row total">
+          <span>Total</span><span id="total">₹0</span>
+        </div>
+        <div class="actions">
+          <button id="book" class="btn">Book Now</button>
+          <button id="cancel" class="btn secondary">Cancel</button>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="container">
+      © <span id="year"></span> Clothzy. All rights reserved.
+    </footer>
+    <script src="chlothzy.js"></script>
+  </body>
+</html>

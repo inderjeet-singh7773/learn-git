@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  margin: 20px;
+}
+
+/* Headings */
+h1 {
+  color: #0066cc;
+}
+
+h2 {
+  color: #0055aa;
+}
+
+h3 {
+  color: #333;
+}
+
+/* Paragraphs */
+p {
+  font-size: 16px;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  margin: 10px;
+  border: 2px solid #ccc;
+}
+
+/* Lists */
+ol, ul {
+  margin-left: 20px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+
+/* First row as header */
+tr:first-child {
+  background-color: #e6f0ff;
+  font-weight: bold;
+}

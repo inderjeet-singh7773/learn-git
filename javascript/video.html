@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // // add static number
+      // let a = 10;
+      // let b = 20;
+      // let c = a + b;
+      // console.log(c);
+
+      // // add dynamic number
+      // let a = prompt("Enter enter first no");
+      // let b = prompt("Enter enter second no");;
+      // let c = parseInt(a) + parseInt(b);
+      // console.log(c);
+
+      // // square root
+      // var a = prompt("enter any number");
+      // var b = Math.sqrt(a);
+      // console.log(b);
+
+      // // squre
+      // var a = prompt("enter any number");
+      // var b = parseInt(a) * parseInt(a);
+      // console.log(b);
+
+      // // formula of right angle trangle
+      // let a = prompt("Enter enter base");
+      // let b = prompt("Enter enter height");;
+      // let c = (parseInt(a) * parseInt(b)) / 2;
+      // console.log(c);
+
+      // // swapping of two number
+      // // 1st (temporary variable)
+      // var a = prompt("please enter the a value");
+      // var b = prompt("please enter the b value");
+      // console.log(`the value of a  is: ${a} , the value of b is : ${b}`);
+      // var temp;
+      // temp = a ;      // temp ki value a me assign kari hai
+      // a = b ;         // a ki value b me assign kar di
+      // b = temp ;      // b ki value temp me assign kr di
+      // console.log(`after swapping \n the value of a  is: ${a} ,\n the value of b is : ${b}`);
+
+      // // 2nd (withot temporary variable)
+      // var a = parseInt(prompt("please enter the a value"));
+      // var b = parseInt(prompt("please enter the b value"));
+      // console.log(`the value of a  is: ${a} , the value of b is : ${b}`);
+      // a = a + b;
+      // b = a - b;
+      // a = a - b;
+      // console.log(`after swapping \n the value of a  is: ${a} ,\n the value of b is : ${b}`);
+
+      // convert kms to miles
+      // function convert(){
+      //     var kms = document.getElementById('data').value;
+      //     const factor = 0.621371;
+      //     var miles = kms * factor;
+      //     // document.getElementById('result').innerText = `${miles} miles`;
+      //   document.getElementById('result').innerText = miles + 'miles';
+      // }
+
+      // // max number
+      // var a = prompt("please enter the 1st value");
+      //  var b = prompt("please enter the 2nd value");
+      //  var c = prompt("please enter the 3rd value");
+      // var x = Math.max(a,b,c);
+      // console.log(`${a},${b},${c} : largest = ${x} `);
+
+      // // min number
+      // var a = prompt("please enter the 1st value");
+      //  var b = prompt("please enter the 2nd value");
+      //  var c = prompt("please enter the 3rd value");
+      // var x = Math.min(a,b,c);
+      // console.log(`${a},${b},${c} : smallest = ${x} `);
+
+      // // factorial(recousion method)
+      // var a = parseInt(prompt("please enter any number"));
+      // function factorial(a) {
+      //     if (a === 0 || a === 1)
+      //      return 1;
+      //     return a * factorial(a - 1);
+      // }
+      // console.log(factorial(a));
+
+      // // table
+      // var number = parseInt(prompt("please enter any number"));
+      // function table(number){
+      //     for (var i=1;i<=10;i++){
+      //         var res = i*number;
+      //         console.log(`${number} x ${i} = ${res}`);
+      //     }
+      // }
+      // table(number);
+
+      // //armstrong nnumber yhe kaha kaam ata hai (time 2:00:15)
+      // var number = prompt("please enter any number");
+      // var temp = number;
+      // var sum = 0 ;
+      // while (temp>0){
+      //    var digit = temp%10;
+      //    sum += digit **3;  // sum= sum+ 3*3*3 =27 ,27 + 125 = 152 , 152+1=153
+      //    temp = parseInt(temp/10);  //  153/10 => div =15 , div 1 , div 0
+      // }
+      // if (sum == number){
+      //      console.log(`${number} is a armstrong number `);
+      // }
+      // else{
+      //     console.log(`${number} is not a armstrong number `);
+      // } // 153 
+      // //total digit 3
+      // // 1*1*1+5*5*5+3*3*3
+
+      // //fibonacci sequence
+      var a=0,b=1;
+      console.log(a);
+      console.log(b);
+      for (var i=0;i<=10;i++){
+      var temp = a+b;
+      console.log(temp);
+      a=b;
+      b=temp;
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <input type="number" step="any" id="data"/>kms
+      <button onclick="convert()">convert</button> miles
+      <h1 id="result"></h1> -->
+  </body>
+</html>

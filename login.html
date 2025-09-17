@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background-image: url(image/animation\ 1.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+        .login-box {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .person {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+        .eyes {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        .eye {
+            width: 20px;
+            height: 20px;
+            background: black;
+            border-radius: 50%;
+            transition: transform 0.1s ease-in-out;
+        }
+        .eye.closed {
+            background: white;
+            border: 3px solid black;
+            height: 5px;
+            border-radius: 50px;
+        }
+        .input-box {
+            margin: 15px 0;
+            position: relative;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .login-btn {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="person">
+            <img src="image/animation.jpeg" width="100" height="100" alt="Person">
+            <div class="eyes">
+                <div class="eye" id="eye-left"></div>
+                <div class="eye" id="eye-right"></div>
+            </div>
+        </div>
+        <h2>Login</h2>
+        <form>
+            <div class="input-box">
+                <input type="text" id="username" required placeholder="Username">
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" required placeholder="Password">
+                <input type="checkbox" id="showPassword"> Show Password
+            </div>
+            <button class="login-btn">Login</button>
+        </form>
+    </div>
+    <script>
+        const eyes = document.querySelectorAll(".eye");
+        const passwordInput = document.getElementById("password");
+        const showPassword = document.getElementById("showPassword");
+
+        document.addEventListener("mousemove", (event) => {
+            let x = (event.clientX / window.innerWidth) * 100;
+            eyes.forEach(eye => {
+                eye.style.transform = `translateX(${x - 50}%)`;
+            });
+        });
+
+        passwordInput.addEventListener("focus", () => {
+            eyes.forEach(eye => eye.classList.add("closed"));
+        });
+
+        passwordInput.addEventListener("blur", () => {
+            eyes.forEach(eye => eye.classList.remove("closed"));
+        });
+
+        showPassword.addEventListener("change", () => {
+            if (showPassword.checked) {
+                passwordInput.type = "text";
+                eyes.forEach(eye => eye.classList.remove("closed"));
+            } else {
+                passwordInput.type = "password";
+                eyes.forEach(eye => eye.classList.add("closed"));
+            }
+        });
+    </script>
+</body>
+</html>
