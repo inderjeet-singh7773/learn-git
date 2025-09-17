@@ -4,389 +4,409 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prime Video</title>
+    <link rel="stylesheet" href="amazone.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
   </head>
   <style>
- body {
-  background-color: #000;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
 
-/* Navbar */
-.navbar {
-  font-size: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  background: rgba(36, 33, 33, 0.083);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(20px);
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-}
+    /* Navbar */
+    .navbar {
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      background: rgba(36, 33, 33, 0.083);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(20px);
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
 
-.navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
 
-.navbar-center {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
+    .navbar-center {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
 
-.navbar-center li {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
+    .navbar-center li {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
 
-.navbar-center li:hover {
-  cursor: pointer;
-  border: none;
-  background: #ffffff;
-  color: #000000;
-  border-radius: 0.25rem;
-  padding: 5px 7px;
-}
+    .navbar-center li:hover {
+      cursor: pointer;
+      border: none;
+      background: #ffffff;
+      color: #000000;
+      border-radius: 0.25rem;
+      padding: 5px 7px;
+    }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
 
-.navbar-right i {
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
+    .navbar-right i {
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
 
-.navbar-right i:hover {
-  background: #ffffff;
-  color: #161515;
-  border-radius: 1.5rem;
-  padding: 6px 8px;
-}
+    .navbar-right i:hover {
+      background: #ffffff;
+      color: #161515;
+      border-radius: 1.5rem;
+      padding: 6px 8px;
+    }
 
-.navbar-right select {
-  font-size: 1.25rem;
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 0.2rem 0.5rem;
-  border-radius: 5px;
-}
+    .navbar-right select {
+      font-size: 1.25rem;
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+    }
 
-.join-btn {
-  font-size: 1.2rem;
-  background: #1f80e0;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+    .join-btn {
+      font-size: 1.2rem;
+      background: #1f80e0;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-.join-btn:hover {
-  background: #0d6efd;
-  transform: scale(1.1);
-}
+    .join-btn:hover {
+      background: #0d6efd;
+      transform: scale(1.1);
+    }
 
-.language-select:hover {
-  background: #ffffff;
-  color: #000000;
-}
+    .language-select:hover {
+      background: #ffffff;
+      color: #000000;
+    }
 
-/* Section Common */
-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem 8rem; /* top right bottom left */
-  gap: 1rem;
-}
+    /* Section Common */
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 8rem; /* top right bottom left */
+      gap: 1rem;
+    }
 
-section img {
-  max-width: 100%;
-  max-width: 500rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.6);
-}
+    section img {
+      max-width: 100%;
+      max-width: 500rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    }
 
-section .content {
-  max-width: 100rem;
-  align-self: flex-start;
-}
+    section .content {
+      max-width: 100rem;
+      align-self: flex-start;
+    }
 
-section h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
+    section h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
 
-section p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+    section p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
 
-.btn {
-  background: #ffffff;
-  color: #000000;
-  padding: 1rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.75rem;
-  transition: all 0.3s ease;
-}
+    .btn {
+      background: #ffffff;
+      color: #000000;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.75rem;
+      transition: all 0.3s ease;
+    }
 
-.btn:hover {
-  transform: scale(1.1);
-   filter: blur(1px); 
-}
+    .btn:hover {
+      transform: scale(1.1);
+      filter: blur(1px);
+    }
 
-/* Section 3 */
-#section3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px 0 170px;
-  gap: 2rem;
-}
+    /* Section 3 */
+    #section3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px 0 170px;
+      gap: 2rem;
+    }
 
-#section3 .content {
-  max-width: 40%;
-}
+    #section3 .content {
+      max-width: 40%;
+    }
 
-#section3 h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
+    #section3 h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
 
-#section3 p {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-  color: #ccc;
-}
+    #section3 p {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: #ccc;
+    }
 
-#section3 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;   
-}
-#section3 .grid img {
-  width: 100%;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+    #section3 .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    #section3 .grid img {
+      width: 100%;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
-#section3 .grid img:hover {
-  box-shadow: 2px 2px 8px 0 rgb(234, 229, 229);
-}
+    #section3 .grid img:hover {
+      box-shadow: 2px 2px 8px 0 rgb(234, 229, 229);
+    }
 
+    /* Footer */
+    footer {
+      background: #282626;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
 
-/* Footer */
-footer {
-  background: #282626;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-}
+    footer img {
+      width: 8rem;
+      margin-bottom: 1rem;
+    }
 
-footer img {
-  width: 8rem;
-  margin-bottom: 1rem;
-}
+    footer ul {
+      font-size: rem;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1rem 0;
+    }
 
-footer ul {
-  font-size: rem;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 1rem 0;
-}
+    footer li {
+      font-size: 1.25rem;
+      color: #1f80e0;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
 
-footer li {
-  font-size: 1.25rem;
-  color: #1f80e0;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
+    footer p {
+      font-size: 1.25rem;
+      color: #657475;
+    }
 
-footer p {
-  font-size: 1.25rem;
-  color: #657475;
-}
+    /* Responsive for mobile phones */
+    @media (max-width: 900px) {
+      /* Section 1 & 2: vertical layout */
+      section#section1,
+      section#section2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem; /* mobile padding */
+      }
 
-/* Responsive for mobile phones */
-@media (max-width: 900px) {
-  /* Section 1 & 2: vertical layout */
-  section#section1,
-  section#section2 {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem; /* mobile padding */
-  }
+      /* Image upar, text niche */
+      section#section1 .image-section,
+      section#section2 .image-section {
+        order: -1; /* image first */
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+      }
 
-  /* Image upar, text niche */
-  section#section1 .image-section,
-  section#section2 .image-section {
-    order: -1; /* image first */
-    width: 100%;
-    max-height: 300px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-  }
+      /* Image fade from bottom */
+      section#section1 .image-section img,
+      section#section2 .image-section img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        -webkit-mask-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        mask-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
 
-  /* Image fade from bottom */
-  section#section1 .image-section img,
-  section#section2 .image-section img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to top, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-  }
+      section#section1 .content,
+      section#section2 .content {
+        max-width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+      }
 
-  section#section1 .content,
-  section#section2 .content {
-    max-width: 100%;
-    margin-top: 1rem;
-    text-align: center;
-  }
+      /* Section 3: vertical layout */
+      section#section3 {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
 
-  /* Section 3: vertical layout */
-  section#section3 {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
+      section#section3 .content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
 
-  section#section3 .content {
-    max-width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+      section#section3 .grid {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+      }
 
-  section#section3 .grid {
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-  }
-
-  /* Cube images for mobile */
-  section#section3 .grid img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* square/cube */
-    object-fit: cover;
-    border-radius: 0.75rem;
-  }
-}
-
-
+      /* Cube images for mobile */
+      section#section3 .grid img {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* square/cube */
+        object-fit: cover;
+        border-radius: 0.75rem;
+      }
+    }
   </style>
   <body>
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+      <div class="navbar-left">
+        <img
+          src="image/logo-min-remaster.png"
+          alt="Prime Video Logo"
+          style="width: 7rem; height: auto"
+        />
 
-  <!-- Navbar -->
-  <div class="navbar" id="navbar">
-    <div class="navbar-left">
-      <img src="image/logo-min-remaster.png" alt="Prime Video Logo" style="width: 7rem; height: auto;">
-      
-      <ul class="navbar-center">
-        <li>Home</li>
-        <li>Movies</li>
-        <li>TV shows</li>
-        <li>Live TV</li>
-        <li>|</li>
-        <li><i class="fa-solid fa-layer-group"></i>Subscriptions</li>
+        <ul class="navbar-center">
+          <li>Home</li>
+          <li>Movies</li>
+          <li>TV shows</li>
+          <li>Live TV</li>
+          <li>|</li>
+          <li><i class="fa-solid fa-layer-group"></i>Subscriptions</li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <select class="language-select" style="border: none">
+          <option>EN</option>
+        </select>
+        <i class="fas fa-grip-vertical"></i>
+        <i class="fa-solid fa-circle-user"></i>
+        <button class="join-btn">Join Prime</button>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <section id="section1">
+      <div class="content">
+        <h1>Welcome to Prime Video</h1>
+        <p>
+          Join Prime to watch the latest movies, TV shows and award-winning
+          Amazon Originals
+        </p>
+        <br />
+        <button class="btn">Sign in to join Prime</button>
+      </div>
+      <div class="image-section">
+        <img src="image/MLP.jpg" alt="Movie rentals on Prime Video" />
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="section2">
+      <div class="content">
+        <h1>Movie rentals on Prime Video</h1>
+        <p>Early Access to new movies, before digital subscription</p>
+        <br />
+        <button class="btn">Rent now</button>
+      </div>
+      <div class="image-section">
+        <img
+          src="image/TVOD_MLP_Right.jpg"
+          alt="Movie rentals on Prime Video"
+        />
+      </div>
+    </section>
+
+    <br /><br /><br /><br />
+
+    <!-- Section 3 -->
+    <section id="section3">
+      <div class="content">
+        <h1>Your favorite subscriptions all in one place</h1>
+        <p>
+          Customers can subscribe to get access to a variety of premium and
+          specialty content, easily accessible within the Prime Video app
+        </p>
+      </div>
+
+      <div class="grid">
+        <img src="image/tv.png" alt="Apple TV+" />
+        <img src="image/crunchyroll.png" alt="Crunchyroll" />
+        <img src="image/lion.png" alt="Lionsgate" />
+        <img src="image/discovery.png" alt="Discovery+" />
+        <img src="image/anime times.png" alt="Anime Times" />
+        <img src="image/manorama.png" alt="Manorama" />
+        <img src="image/chaupal.png" alt="Chaupal" />
+        <img src="image/bbc.png" alt="BBC Player" />
+        <img src="image/fancode.png" alt="Fancode" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <img
+        src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/logo/pv_logo_white._CB548637580_.png"
+        alt="Prime Video Footer Logo"
+      />
+      <ul>
+        <li>Terms and Privacy Notice</li>
+        <li>Send us feedback</li>
+        <li>Help</li>
       </ul>
-    
-    </div>
-    
-    <div class="navbar-right">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <select class="language-select" style="border: none;">
-        <option>EN</option>
-      </select>
-      <i class="fas fa-grip-vertical"></i>
-      <i class="fa-solid fa-circle-user"></i>
-      <button class="join-btn">Join Prime</button>
-    </div>
-  </div>
-
-  <!-- Section 1 -->
-  <section id="section1">
-    <div class="content">
-      <h1>Welcome to Prime Video</h1>
-      <p>Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals</p><br>
-      <button class="btn">Sign in to join Prime</button>
-    </div>
-    <div class="image-section">
-      <img src="image/MLP.jpg" alt="Movie rentals on Prime Video">
-    </div>
-  </section>
-
-  <!-- Section 2 -->
-  <section id="section2">
-    <div class="content">
-      <h1>Movie rentals on Prime Video</h1>
-      <p>Early Access to new movies, before digital subscription</p><br>
-      <button class="btn">Rent now</button>
-    </div>
-    <div class="image-section">
-      <img src="image/TVOD_MLP_Right.jpg" alt="Movie rentals on Prime Video">
-    </div>
-  </section>
-
-  <br><br><br><br>
-
-  <!-- Section 3 -->
-<section id="section3">
-  <div class="content">
-    <h1>Your favorite subscriptions all in one place</h1>
-    <p>Customers can subscribe to get access to a variety of premium and specialty content, easily accessible within the Prime Video app</p>
-  </div>
-
-  <div class="grid">
-    <img src="image/tv.png" alt="Apple TV+">
-    <img src="image/crunchyroll.png" alt="Crunchyroll">
-    <img src="image/lion.png" alt="Lionsgate">
-    <img src="image/discovery.png" alt="Discovery+">
-    <img src="image/anime times.png" alt="Anime Times">
-    <img src="image/manorama.png" alt="Manorama">
-    <img src="image/chaupal.png" alt="Chaupal">
-    <img src="image/bbc.png" alt="BBC Player">
-    <img src="image/fancode.png" alt="Fancode">
-  </div>
-</section>
-
-
-  <!-- Footer -->
-  <footer>
-    <img src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/logo/pv_logo_white._CB548637580_.png" alt="Prime Video Footer Logo">
-    <ul>
-      <li>Terms and Privacy Notice</li>
-      <li>Send us feedback</li>
-      <li>Help</li>
-    </ul>
-    <p>© 1996-2025, Amazon.com, Inc. or its affiliates</p>
-  </footer>
-
-</body>
+      <p>© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+  </body>
 </html>
