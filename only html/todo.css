@@ -1,0 +1,275 @@
+/* 3rd css */
+
+body {
+    background-image: url(download.jpeg);
+    background-size: cover;
+    height: 40rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-box {
+    padding: 50px;
+    width: 400px;               
+    /* border: 2px solid black; */
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(239, 233, 233);
+}
+
+button {
+    padding: 2.5px 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.562);
+}
+
+select {
+    padding: 2.5px 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.587);
+}
+
+select:hover {
+    background-color: grey;
+    color: white;
+}
+
+ul {
+    margin: 1.5rem;
+    padding: 2rem;
+    list-style-type: none;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+}
+
+li{
+   color: white;
+   margin: 10px;
+}
+
+.addtodo {
+    background-color: #4caf50;
+    color: white;
+}
+
+.addtodo:hover {
+    background-color: #00a305;
+}
+
+.edit {
+    background-color: #36c1f4;
+    color: white;
+}
+
+.edit:hover {
+    background-color: #0285b5;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #ca0d00;
+}
+
+
+/* 2nd css */
+
+/* body {
+    background-image: url(download.jpeg) ;
+}
+
+.todo-box {
+    size: 10px;
+    padding: 50px;
+    margin: 100px auto;
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    padding: 5px 20px 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(239, 233, 233);
+}
+
+button{
+    padding: 2.5px 10px 2.5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+select{
+    padding: 2.5px 5px 2.5px 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+select:hover{
+    background-color: grey;
+    color: white;
+}
+
+ul{
+    margin: 1.5rem;
+    padding: 2rem;
+    list-style-type: none;
+    border: 2px solid black;
+    border-radius: 10px;
+} */
+/*  1st  */
+/* li{
+
+} */
+
+.addtodo {
+    background-color: #4caf50;
+    color: white;
+}
+.addtodo:hover{
+    background-color: #00a305;
+    color: white;
+}
+
+.edit {
+    background-color: #36c1f4;
+    color: white;
+}
+.edit:hover{
+    background-color: #0285b5;
+    color: white;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+}
+.delete:hover{
+    background-color: #ca0d00;
+    color: white;
+}
+
+
+
+
+
+/* :root {
+    --first-color: #4caf50;
+    --second-color: #36c1f4;
+    --third-color: #f44336;
+    --background-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-image: url(download.jpeg) ;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+div {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.todo-box {
+    width: 400px;                
+    background: white;          
+    padding: 20px;              
+    border-radius: 8px;           
+    margin: 50px auto;            
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70%;
+    margin-right: 10px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+button[type="submit"] {
+    background-color: var(--first-color);
+}
+ul {
+    list-style-type: none;
+}
+li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button.edit {
+    background-color: var(--second-color);
+}
+button.delete {
+    background-color: var(--third-color);
+}
+button.edit:hover {
+    background-color: #29b6f6;
+}
+button.delete:hover {
+    background-color: #e53935;
+}
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+button#delete-all:hover {
+    background-color: #d32f2f;
+} */

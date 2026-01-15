@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodejs practice (Cab Booking Form)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+
+  <!-- nav bar -->
+
+    <!-- nav bar  -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+   <!-- form -->
+
+    <div class="container mt-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="card-title text-center mb-4">Book Your Cab</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="pickupLocation" class="form-label">Pickup Location</label>
+                    <input type="text" class="form-control" id="pickupLocation" placeholder="Enter pickup location" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dropoffLocation" class="form-label">Drop-off Location</label>
+                    <input type="text" class="form-control" id="dropoffLocation" placeholder="Enter drop-off location" required>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="pickupDate" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="pickupDate" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="pickupTime" class="form-label">Time</label>
+                        <input type="time" class="form-control" id="pickupTime" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="carType" class="form-label">Car Type</label>
+                    <select class="form-select" id="carType" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Standard</option>
+                        <option>Premium</option>
+                        <option>SUV</option>
+                        <option>Luxury</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="passengers" class="form-label">Number of Passengers</label>
+                    <input type="number" class="form-control" id="passengers" min="1" value="1" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+
+      <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone-alt"></i> +91 1234567890 </li>
+            <li><i class="fas fa-envelope"></i> nhipata@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> mera bharat mahan</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">About Us</a></li>
+            <li><a href="#" class="text-white">Services</a></li>
+            <li><a href="#" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="col-md-4">
+          <h5>Subscribe to Our Newsletter</h5>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-light">
+      
+      <!-- Social Media Links -->
+      <div class="text-center">
+        <a href="https://facebook.com" class="text-white mx-3" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" class="text-white mx-3" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" class="text-white mx-3" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" class="text-white mx-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <p class="text-center mt-3 mb-0">&copy; 2025 CabBooking. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

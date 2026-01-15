@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body>
+
+    <div class="todo-box">
+        <br />
+        <h2>Todo List</h2>
+        <br />
+    <!-- todo-list  -->
+     
+    <form action="/todo.html" method="post">
+      <input type="text" name="todo" required />
+      <button class="addtodo" type="button" onclick="window.location.href='/addtodo.html'">Add Todo</button>
+    </form>
+        <ul>
+        <li>
+          Pending
+          <button
+            type="button"
+            class="edit"
+            onclick="window.location.href='/edit.html'"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="delete"
+            onclick="window.location.href='/form.html'"
+          >
+            Delete
+          </button>
+          <select name="status" id="status">
+              <option value="pending">Pending</option>
+              <option value="fulfill">Fulfill</option>
+              <option value="complete">Complete</option>
+            </select>
+        </li> 
+        <li>
+          fulfill
+          <button
+            type="button"
+            class="edit"
+            onclick="window.location.href='/edit.html'"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="delete"
+            onclick="window.location.href='/form.html'"
+          >
+            Delete
+          </button>
+          <select name="status" id="status">
+              <option value="pending">Pending</option>
+              <option value="fulfill">Fulfill</option>
+              <option value="complete">Complete</option>
+            </select>
+        </li>
+        <li>
+          complete
+          <button
+            type="button"
+            class="edit"
+            onclick="window.location.href='/edit.html'"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="delete"
+            onclick="window.location.href='/form.html'"
+          >
+            Delete
+          </button>
+          <select name="status" id="status">
+              <option value="pending">Pending</option>
+              <option value="fulfill">Fulfill</option>
+              <option value="complete">Complete</option>
+            </select>
+        </li>
+        <li>
+          hlo
+          <button
+            type="button"
+            class="edit"
+            onclick="window.location.href='/edit.html'"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="delete"
+            onclick="window.location.href='/form.html'"
+          >
+            Delete
+          </button>
+          <select name="status" id="status">
+              <option value="pending">Pending</option>
+              <option value="fulfill">Fulfill</option>
+              <option value="complete">Complete</option>
+            </select>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
