@@ -90,7 +90,7 @@ export default function Hero() {
 
         <div className="flex gap-4 mt-8">
           <a
-            href="https://github.com/inderjeet-singh"
+            href="https://github.com/inderjeet-singh7773"
             target="_blank"
             className="px-6 py-3 bg-black text-white rounded-lg hover:scale-105 transition"
           >
@@ -98,7 +98,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://linkedin.com/in/inderjeet-singh"
+            href="https://www.linkedin.com/in/inderjeet-singh-b4583a358/"
             target="_blank"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:scale-105 transition"
           >

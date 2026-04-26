@@ -111,7 +111,7 @@ export default function Contact() {
         {/* Social Links */}
         <div className="flex justify-center gap-4">
           <a
-            href="https://github.com/inderjeet-singh"
+            href="https://github.com/inderjeet-singh7773"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center hover:scale-110 transition-transform"
@@ -120,7 +120,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://linkedin.com/in/inderjeet-singh"
+            href="https://www.linkedin.com/in/inderjeet-singh-b4583a358/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform"
